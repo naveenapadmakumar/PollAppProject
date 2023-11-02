@@ -1,0 +1,33 @@
+
+{% load static %}
+<link href="{% static 'css/index.css' %}" rel="stylesheet">
+<style>
+ footerHome{
+ margin-top:500px;}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+{% include 'app1/navbar.html' %}
+<div class="container1" style="">
+ {% if latest_question_list %}
+    <ul>
+
+    {% for question in latest_question_list %}
+        <li class="questions" id="question"><a href="{% url 'detail' question.id %}" style="text-decoration:none;color:black;">{{ question.question_text }}</a></li><br>
+    {% endfor %}
+
+    </ul>
+
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+</div>
+{% include 'app1/footer.html' %}
+
+
+
+
+
+
+

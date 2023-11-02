@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("div").click(function () {
+                $("div").dblclick();
+            });
+        });
+
+
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("input").blur();
+                $("p").html(
+                    "This is blur method ");
+            });
+        });
+
+
+        <!--jQuery code to show blur method-->
+            $(document).ready(function () {
+                $("input").blur(function () {
+                    $(this).css("background-color", "#ADFF2F");
+                });
+            });
+
+        <!--jQuery code to show blur method-->
+            $(document).ready(function () {
+                $("input").blur(function () {
+                    $(this).css("background-color", "grey");
+                });
+            });
+
+            $(document).ready(function () {
+            $("button").click(function () {
+                $("input").change();
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#Outer").fadeIn(1000);
+            });
+        });
+
+                $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+          });
+        });
+
+                $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideDown(5000);
+          });
+          $("#stop").click(function(){
+            $("#panel").stop();
+          });
+        });
+
+        $(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeToggle();
+    $("#div2").fadeToggle("slow");
+    $("#div3").fadeToggle(3000);
+  });
+});
+
+        $(document).ready(function(){
+  $("button").click(function(){
+    $("p").css("background-color", "red");
+  });
+});
+
+$(document).ready(function() {
+  // When the input field gets focus
+  $("#name2").focus(function() {
+    $(this).css("background-color", "lightblue");
+  });
+
+  $("#name2").blur(function() {
+    $(this).css("background-color", "");
+  });
+});
+
+          $(document).ready(function () {
+    $('.container').mouseenter(function () {
+      $(this).css('background-color', 'red');
+    });
+    $('.container').mouseleave(function () {
+      $(this).css('background-color', '');
+    });
+  });
+ </script>
+
+
+
+    <style>
+
+        #panel, #flip {
+          padding: 5px;
+          text-align: center;
+          background-color: #e5eecc;
+          border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+          padding: 50px;
+          display: none;
+        }
+        div {
+            display: block;
+            width: 370px;
+            padding: 10px;
+            font-size: 25px;
+            border: 2px solid green;
+            align-items: center;
+
+        }
+        #panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: green;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+
+#Outer {
+        border: 1px solid black;
+        padding-top: 40px;
+        height: 140px;
+        background: green;
+        display: none;
+        }
+
+#panel, #flip {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+    </style>
+
+   <style>.test {
+  color: red;
+  font-size: 20px;
+}
+
+.demo {
+  color: green;
+  font-size: 25px;
+}</style>
+</head>
+<body>
+
+
+    <!-- double click event-->
+<!--    <center>-->
+<!--        <div ondblclick="alert(-->
+<!--            'dblclick event')">-->
+<!--            button-->
+<!--        </div>-->
+<!--    </center>-->
+
+
+<!--       Enter Value:-->
+<!--    <input type="text" name="fullname">-->
+<!--       Enter Value:-->
+<!--    <input type="text">-->
+<!--    <br><br>-->
+
+<!--    <button id="btn">-->
+<!--        click me-->
+<!--    </button>-->
+<!--    <p style="color:green"></p>-->
+
+
+<!--        <button>Click Me!</button>-->
+<!--    <p>Enter value:-->
+<!--        <input value="GeeksforGeeks"-->
+<!--               onchange="alert(this.value)"-->
+<!--               type="text">-->
+<!--    </p>-->
+
+
+
+
+<!--<button id="stop">Stop sliding</button>-->
+
+<!--<div id="flip">Click to slide down panel</div>-->
+<!--<div id="panel">Hello world!</div>-->
+
+
+<!--<button>Click to fade in/out boxes</button><br><br>-->
+
+<!--<div id="div1" style="width:80px;height:80px;background-color:red;"></div>-->
+<!--<br>-->
+<!--<div id="div2" style="width:80px;height:80px;background-color:green;"></div>-->
+<!--<br>-->
+<!--<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>-->
+
+
+<!--<p>This is a paragraph.</p>-->
+<!--<p class="para1">This is p element with class="para1".</p>-->
+<!--<p class="para1">This is p element with class="para1".</p>-->
+<!--<p class="test1">This is p element with class="test1".</p>-->
+<!--<p class="test1">This is p element with class="test1".</p>-->
+<!--<button>Remove all p elements with class="para1" and class="test1"</button>-->
+
+<!--<h1>Google Login</h1>-->
+<!--{% load socialaccount %}-->
+<!--<a href="{% provider_login_url 'google' %}?"next="home">Login with Google</a>-->
+
+<!--<p style="background-color:blue;">first heading</p>-->
+<!--<p style="background-color:yellow;">second heading</p>-->
+<!--<p style="background-color:orange;">third heading</p>-->
+<!--<button>Click me</button>-->
+
+<!-- <label>name</label>-->
+<!--<input type="text" name="name" id="name2">-->
+
+<!--<div class="container">-->
+<!--    <p>hello world</p>-->
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+<link href="{% static 'css/result.css' %}" rel="stylesheet">
+<style>
+.resultFooter{
+margin-top:-187px;}
+    li{
+    list-style:none;}
+</style>
+<div class="result" >
+        <h2>{{ question.question_text }}</h2>
+        <div class="content2">
+        <ul>
+        {% for choice in question.choice_set.all %}
+            <li>{{ choice.choice_text }} -- <span style="color:white;">{{ choice.votes }} vote{{ choice.votes|pluralize }}</span></li><br><br>
+        {% endfor %}
+
+        </ul>
+        <div class="vote1">
+           <a href="{% url 'detail' question.id %}" class="vote2"><button id="vote_button" class="button"
+           style="background-color: green;width:113px;height: 30px;border: none;color: white;margin-top:-21px;margin-left:46px;border-radius: 6px;;" >Vote again</button></a>
+        </div>
+
+
+</div>
+
+</div>
+<div class="resultfooter" style="background-color:#7464bc;margin-top:150px;">
+    <p>copyright@2023</p>
+</div>
+
+
+

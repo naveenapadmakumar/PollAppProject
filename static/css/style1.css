@@ -1,0 +1,154 @@
+body{
+        background-color: #7464bc;
+        }
+.container{
+
+        margin:50px 400px;
+        background-color:white;
+        border-radius:10px;
+
+        }
+
+.signup{
+        padding-left:94px;
+        margin-left:87px;}
+        form label{
+        display:flex;
+
+        }
+
+input{
+        width:100%;
+      padding: 12px 20px;
+      margin: 9px -97px;
+      box-sizing: border-box;
+      border-radius:19px;
+      outline:none;
+      border:1px solid grey;
+        }
+label{
+    margin-left: -24%;
+    margin-top: -1%;
+    }
+
+
+.username{
+    margin-top:10%;
+    }
+
+#signup_button{
+        background-color:#7464bc;
+        border-radius:6px;
+        border:none;
+        color: white;
+        font-size: 14px;
+        width:330px;
+        height:37px;
+        margin-top:20px;
+        margin-left:-87px;
+        background-color:#7464bc;
+        padding-bottom:5px;
+        margin-bottom:20px;
+        cursor:pointer;
+        }
+
+#signup_button:hover{
+        background:#8A2BE2;
+        }
+
+.user1
+    {
+        margin-top:10%;
+        }
+
+.firstname{
+        margin-top:4%;
+        }
+
+.lastname{
+        margin-top:5%;
+        }
+
+ .email{
+        margin-top:5%;
+        }
+
+.input2{
+        margin-top:-4%;
+        }
+
+.email2{
+        margin-top:-5%
+        }
+
+.passwd11{
+        margin-top:-5%;
+        }
+
+
+.passwd222{
+        margin-top:-4%;
+        margin-bottom:5%;
+       }
+
+.error1{
+    margin-top: -4%;
+    margin-left: -34%;
+    color: red;
+    }
+
+.errorlist{
+list-style:none;
+}
+
+.error2{
+    margin-top: -4%;
+    margin-left: -34%;
+    color: red;
+    }
+
+.error3{
+    margin-top: -4%;
+    margin-left: -34%;
+    color: red;
+    }
+
+.error4{
+    margin-top: -4%;
+    margin-left: -34%;
+    color: red;
+    }
+
+.error5{
+    margin-top: -4%;
+    margin-left: -34%;
+    color: red;}
+
+.error6{
+    margin-top: -4%;
+    margin-left: -34%;
+    color: red;
+    }
+
+.passwd{
+        margin-top:5%;
+        }
+
+.passwd2{
+        margin-top:5%;
+        }
+
+.heading{
+        padding-top:4%;
+        margin-left:44px;
+        }
+
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 9px -97px;
+    box-sizing: border-box;
+    border-radius: 19px;
+    outline: none;
+    border: 1px solid grey;
+}

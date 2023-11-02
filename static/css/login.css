@@ -1,0 +1,88 @@
+body {
+    background-color: #7464bc;
+}
+.container {
+    margin: 101px 425px;
+    background-color: white;
+    border-radius: 10px;
+    width: 498px;
+    height: 503px;
+}
+.login {
+    padding-left: 94px;
+    margin-left: 106px;
+}
+form label {
+    display: flex;
+}
+
+#submit_button{
+    color: white;
+    font-size: 14px;
+    width: 341px;
+    margin-left: -41%;
+    height: 40px;
+    background-color: #7464bc;
+    border-radius: 6px;
+    border: none;
+    margin-top:12%;
+    cursor:pointer;
+}
+
+#submit_button:hover
+{
+background:#8A2BE2;
+}
+
+.username1 {
+    margin-left: -45%;
+    margin-bottom: -5%;
+}
+input{
+    width: 130%;
+    padding: 12px 20px;
+    margin: 12px -143px;
+    box-sizing: border-box;
+    border-radius: 19px;
+    outline: none;
+    border:1px solid grey;
+}
+
+.allauth{
+margin-top:10%;
+}
+
+button{
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    margin-left: -12%;
+    border: none;
+    padding: 4%;
+}
+
+button:hover{
+background:green;
+}
+
+.auth{
+    margin-left: -4%;
+    margin-top: 10%;
+    }
+
+
+.heading{
+    margin-left: 6%;
+    padding-top: 17px;
+}
+
+.signup{
+margin-left:20%;
+}
+
+.error_email{
+margin-left:10px;
+}
+
+
+

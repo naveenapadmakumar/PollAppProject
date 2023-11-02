@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link href="{% static 'css/login.css' %}" rel="stylesheet">
+    <style>
+        .errorlist{
+          list-style:none;}
+        .email{
+            margin-left:-134px;
+            margin-bottom:-5px;}
+        input{
+        width: 130%;
+        padding: 12px 20px;
+        margin: 12px -143px;
+        box-sizing: border-box;
+        border-radius: 19px;
+        outline: none;
+        border:1px solid grey;
+}
+        span {
+  display: none;
+}
+    </style>
+</head>
+<body>
+<div class="container" id="content">
+    <div class="login">
+        <h2 class="heading" style="margin-left:7%;padding-top:10%;">Login</h2>
+        <form id="login_form" method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div>
+                <label style="margin-left:-134px;margin-bottom:-7px;">{{ form1.email.label }}</label><br>
+                <div class="email1">{{ form1.email }}</div>
+
+            </div>
+            <div>
+                <label class="password1" style="margin-left: -46%;margin-bottom: -4%;margin-top:7px;">{{ form1.password.label }}</label><br>
+                <div>{{ form1.password }}</div>
+                <div class="error_email" style="margin-left: -176px;color: red;">{{form1.errors.email}}</div>
+               <!-- Display password field errors -->
+            </div>
+            <button type="submit" id="submit_button">Login</button>
+            <br><br>
+            <div style="margin-left:-14%;"><a href="{% url 'signup' %}">Don't have an account? Create</a></div>
+
+        </form>
+        {% load socialaccount %}
+        <div class="auth">
+            <a href="{% provider_login_url 'google' %}?"next="home" style="color:red;"><button style="width:66%;height:10%;">Continue with Google</button></a>
+        </div>
+
+
+    </div>
+
+</div>
+<span>Enter your email</span>
+
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+{% extends 'app1/home.html' %}
+{% block content %}
+
+<head>
+    {% load static %}
+    <link href="{% static 'css/detail.css' %}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <style>
+        .footerHome {
+            margin-top: -45px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="detail">
+        <div class="poll-form-container">
+            <form action="{% url 'vote' question.id %}" method="post" id="votecontent">
+                {% csrf_token %}
+                <fieldset>
+                    <legend><h1 class="heading_detail">{{ question.question_text }}</h1></legend>
+                    {% if error_message %}
+                    <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    {% for choice in question.choice_set.all %}
+                    <div class="input">
+                        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br><br>
+                    </div>
+                    {% endfor %}
+                </fieldset>
+                <!-- <input class="bttn" type="submit" value="Vote" id="vote_bttn"> -->
+                <button class="bttn" type="button" id="vote_bttn">Vote</button>
+                <a href="{% url 'index' %}" style="text-decoration: none; color:black; margin-left: 15px;">Go Back</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var formActionUrl = "{% url 'vote' question.id %}";
+        var resultUrl = "{% url 'results' question.id %}";
+    </script>
+</body>
+
+{% endblock %}

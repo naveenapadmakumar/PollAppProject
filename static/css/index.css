@@ -1,0 +1,30 @@
+body{
+        margin:0;
+        padding:0;
+        }
+
+        .questions{
+        width:354px;
+        }
+
+.container1{
+        position:absolute !important ;
+        top:30% !important;
+        left:35% !important;
+        background-color:#7464bc !important;
+        width:371px !important;
+        height:279px !important;
+        color :white !important ;
+}
+.questions{
+        width:250px;
+        list-style:none;
+    }
+.questions:hover{
+        color:green;
+        }
+ul{
+        margin-top:40px;
+        margin-left:15px;
+        }
+

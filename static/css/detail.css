@@ -1,0 +1,35 @@
+
+h1{
+    margin-left: 47px !important;
+    color: black;
+    margin-top:19px;
+    }
+
+.container{
+    width:441px !important;
+    height:329px !important;
+    background-color: #7464bc !important;
+    margin:138px auto !important;
+   }
+
+fieldset {
+    border: none;
+        }
+
+.input {
+    margin-left: 50px;
+        }
+.bttn {
+    margin-left: 157px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    margin-top:50px;
+    background-color:green !important;
+        }
+
+.bttn:hover{
+      background:green;
+}

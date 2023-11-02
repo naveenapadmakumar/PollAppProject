@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        {% load static %}
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="container" style="width:42%;height:auto;">
+    <div class="signup">
+<h2 class="heading">Sign Up</h2>
+<form method="post" id="form">
+    {% csrf_token %}
+
+    <div class="firstname"><label>{{form.first_name.label}}</label>
+    {{form.first_name}}<br><div class="error2">{{form.first_name.errors}}</div>
+        </div>
+    <div class="lastname"><label>{{form.last_name.label}}</label><br><div class="input2">{{form.last_name}}</div><div class="error3">{{form.last_name.errors}}</div>
+        </div>
+    <div class="email"><label class="email1">{{form.email.label}}</label><br><div class="email2">{{form.email}}</div><div class="error4">{{form.email.errors}}</div>
+    </div>
+    <div class="phn_num"><label class="phonenum" style="margin-top:3%;">{{form.phone.label}}</label><br><div class="phone_input" style="margin-top:-13px;">{{form.phone}}</div><div class="error5">{{form.phone.errors}}</div>
+        </div>
+    <div class="address"><label class="address" style="margin-top:4%;">{{form.address.label}}</label><br><div class="address_input" style="margin-top:-12px;">{{form.address}}</div><div>{{form.address.errors}}</div>
+        </div>
+    <div class="passwd"><label class="passwd1" style="margin-top:-5%;">{{form.password1.label}}</label><br><div class="passwd11">{{form.password1}}</div><div class="error5">{{form.password1.errors}}</div>
+    </div>
+    <div class="passwd2"><label class="passwd22">{{form.password2.label}}</label>{{form.password2}}<div class="error6">{{form.password2.errors}}</div>
+        </div>
+    <br>
+    <button type="submit" id="signup_button">Submit</button>
+
+    <br><br>
+    <a href="{% url 'login' %}">Already have an account?Login</a>
+
+</form>
+        </div>
+</div>
+
+</form>
+</body>
+</html>
+
